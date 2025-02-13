@@ -29,6 +29,7 @@ cd js/src
     --host=%{_target} \
     --build=%{_target} \
     --target=%{_target} \
+    --disable-static \
     --disable-methodjit \
     --disable-monoic \
     --disable-polyic \
