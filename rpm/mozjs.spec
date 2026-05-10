@@ -29,6 +29,7 @@ cd js/src
     --host=%{_target} \
     --build=%{_target} \
     --target=%{_target} \
+    --disable-static \
     --disable-methodjit \
     --disable-monoic \
     --disable-polyic \
@@ -41,6 +42,8 @@ cd js/src
 %install
 cd js/src
 %make_install
+
+find %{buildroot} -name "*.a" -delete ||:
 
 %post -p /sbin/ldconfig
 
